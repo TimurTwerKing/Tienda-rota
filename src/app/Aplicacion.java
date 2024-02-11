@@ -5,6 +5,9 @@ package app;
 
 import leer.Leer;
 import menu.Menu;
+import productos.Cine;
+import productos.Musica;
+import productos.Videojuego;
 
 /**
  * @author Timur Bogach
@@ -17,6 +20,9 @@ import menu.Menu;
 public class Aplicacion {
 
 	public static void main(String[] args) {
+		Cine productoCine1 = new Cine("Rambo", 4.95f, 5, true);
+		Musica productoMusica1 = new Musica("Slayer", 6.66f, 6, true);
+		Videojuego ProductoVideojuego1 = new Videojuego("Mafia", 9.95f, 2, true);
 
 		Menu.Mensaje_Inicial();
 
@@ -28,7 +34,9 @@ public class Aplicacion {
 
 			switch (Leer.datoInt()) {
 			case 1:
-
+				productoCine1.mostrarDatos();
+				productoMusica1.mostrarDatos();
+				ProductoVideojuego1.mostrarDatos();
 				break;
 			case 2:
 
